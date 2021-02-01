@@ -2,5 +2,8 @@
   "name": "Clipboard Copy Title And Link",
   "version": "1.0",
   "description": "copy the page title and link to the clipboard",
-  "manifest_version": 3
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  }
 }

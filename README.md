@@ -113,3 +113,7 @@ surge public my-project.surge.sh
 6. 一覧に表示されれば確認成功
 
 ※`npm install` `npm run dev` or `npm run build`を忘れずに
+
+# Popupを作成する
+https://developer.chrome.com/docs/extensions/mv3/user_interface/#popup
+
