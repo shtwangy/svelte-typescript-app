@@ -1,7 +1,13 @@
 <script lang="ts">
-    import ContentItem from '../types/ContentItem.ts'
+    import Button from './ButtonContent.svelte'
+
     let url: string | undefined = '';
     let title: string | undefined = '';
+
+    type ContentItem = {
+        title: string;
+        text: string | undefined;
+    }
     let contentItems: Array<ContentItem> = [];
 
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
@@ -32,14 +38,8 @@
             <p>{@html contentItem.text}</p>
         </div>
     {/each}
+    <Button />
 </div>
 
 <style>
-    .title {
-        text-align: center;
-        font-size: 12px;
-        background-color: #c71585;
-        margin: 0;
-        padding: 2px;
-    }
 </style>
