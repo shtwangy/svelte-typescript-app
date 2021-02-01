@@ -1,24 +1,37 @@
 <script lang="ts">
+    import ContentItem from '../types/ContentItem.ts'
     let url: string | undefined = '';
     let title: string | undefined = '';
+    let contentItems: Array<ContentItem> = [];
+
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
         const currentTab = tabs[0];
-        url = currentTab.url;
         title = currentTab.title;
+        url = currentTab.url;
+        contentItems = [
+            {
+                title: 'Title',
+                text: title
+            },
+            {
+                title: 'URL',
+                text: url
+            },
+            {
+                title: 'Text to be copied',
+                text: `${title}<br/>${url}`
+            }
+        ]
     });
 </script>
 
 <div>
-    <h2>Title</h2>
-    <p>{title}</p>
-</div>
-<div>
-    <h2>URL</h2>
-    <p>{url}</p>
-</div>
-<div>
-    <h2>Text to be copied</h2>
-    <p>{title}<br/>{url}</p>
+    {#each contentItems as contentItem}
+        <div>
+            <h2>{contentItem.title}</h2>
+            <p>{@html contentItem.text}</p>
+        </div>
+    {/each}
 </div>
 
 <style>
