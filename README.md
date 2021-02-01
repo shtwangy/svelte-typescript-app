@@ -117,3 +117,11 @@ surge public my-project.surge.sh
 # Popupを作成する
 https://developer.chrome.com/docs/extensions/mv3/user_interface/#popup
 
+`manifest.json`に以下を追加
+```
+"action": {
+  "default_popup": "popup.html" // v2では`browser_action`だったので注意
+}
+```
+
+
