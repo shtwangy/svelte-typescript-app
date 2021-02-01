@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Title from './Title.svelte';
+    import Title from './templates/Title.svelte';
     let url: string | undefined = '';
     let title: string | undefined = '';
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
