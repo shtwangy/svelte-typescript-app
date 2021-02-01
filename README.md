@@ -103,3 +103,13 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+# Developer modeを有効にして確認する
+1. Chromeを開く
+2. `chrome://extensions/`にアクセス
+3. デベロッパーモードのトグルをONにする
+4. `パッケージ化されていない拡張機能を読込む`をクリック
+5. `manifest.json`のあるディレクトリを選択
+6. 一覧に表示されれば確認成功
+
+※`npm install` `npm run dev` or `npm run build`を忘れずに
