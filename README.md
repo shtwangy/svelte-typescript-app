@@ -121,7 +121,11 @@ https://developer.chrome.com/docs/extensions/mv3/user_interface/#popup
 ```
 "action": {
   "default_popup": "popup.html" // v2では`browser_action`だったので注意
-}
+},
+"permissions":[
+  "tabs"
+]
 ```
 
-
+# 実装
+https://developer.chrome.com/docs/extensions/reference/tabs/#method-query
