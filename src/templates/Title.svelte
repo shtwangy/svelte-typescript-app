@@ -7,6 +7,7 @@
         text-align: center;
         font-size: 12px;
         background-color: #c71585;
+        color: #fff;
         margin: 0;
         padding: 2px;
     }
