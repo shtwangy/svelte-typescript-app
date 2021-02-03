@@ -38,7 +38,7 @@
             <p>{@html contentItem.text}</p>
         </div>
     {/each}
-    <Button />
+    <Button {url} {title}/>
 </div>
 
 <style>

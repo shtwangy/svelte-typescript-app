@@ -1,5 +1,25 @@
+<script>
+  export let url;
+  export let title;
+  console.log(url, title);
+  const handleClick = async () => {
+    try {
+      await navigator.clipboard.writeText(`${title}\n${url}`);
+      alert('copy success');
+    } catch (err) {
+      console.log('copy failed: ', err)
+    }
+  }
+</script>
+
 <div class="button-content">
-    <button class="button">Copy</button>
+    <button
+      name="button"
+      class="button"
+      on:click|once={handleClick}
+    >
+      Copy
+    </button>
 </div>
 
 <style>
