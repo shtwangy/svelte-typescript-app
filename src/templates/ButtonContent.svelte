@@ -14,9 +14,8 @@
 
 <div class="button-content">
     <button
-      name="button"
       class="button"
-      on:click|once={handleClick}
+      on:click={handleClick}
     >
       Copy
     </button>
