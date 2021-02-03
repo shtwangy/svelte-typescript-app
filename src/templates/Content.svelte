@@ -31,10 +31,10 @@
     });
 </script>
 
-<div>
+<div class="content">
     {#each contentItems as contentItem}
         <div>
-            <h2>{contentItem.title}</h2>
+            <h2 class="content-title">{contentItem.title}</h2>
             <p>{@html contentItem.text}</p>
         </div>
     {/each}
@@ -42,4 +42,10 @@
 </div>
 
 <style>
+.content {
+    padding: 8px;
+}
+.content-title {
+    color: #c71585;
+}
 </style>
