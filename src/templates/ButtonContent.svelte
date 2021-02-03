@@ -1,7 +1,6 @@
 <script>
   export let url;
   export let title;
-  console.log(url, title);
   const handleClick = async () => {
     try {
       await navigator.clipboard.writeText(`${title}\n${url}`);
